@@ -12,6 +12,22 @@ So far Dejavu has only been tested on Unix systems.
 
 For installing `ffmpeg` on Mac OS X, I highly recommend [this post](http://jungels.net/articles/ffmpeg-howto.html).
 
+
+##  Raspbin Linux version 4.1.19 on Raspberry pi 3
+
+### Dependency installation Raspbin Linux version 4.1.19 on Raspberry pi 3
+Install the dependencies:
+
+	sudo apt-get install gfortran
+	sudo easy_install scipy
+	
+	sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
+	sudo apt-get update ; sudo apt-get -y install python-dev portaudio19-dev
+	
+	pip install --upgrade setuptools
+	sudo easy_install -U setuptools
+	sudo pip install numpy --upgrade
+
 ## Fedora 20+
 
 ### Dependency installation on Fedora 20+
