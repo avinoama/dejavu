@@ -12,6 +12,42 @@ So far Dejavu has only been tested on Unix systems.
 
 For installing `ffmpeg` on Mac OS X, I highly recommend [this post](http://jungels.net/articles/ffmpeg-howto.html).
 
+## ubuntu 14.04+
+
+### Dependency installation ubuntu 14.04+
+Install the dependencies:
+
+    sudo apt-get install python-numpy python-scipy python-matplotlib libportaudio-dev
+    sudo apt-get install python-mysql
+
+    sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
+    sudo apt-get update
+    sudo apt-get install ffmpeg
+
+    # the next line is for all you old machine trying to install new code 
+    export LC_ALL=C
+    pip install --upgrade setuptools
+
+    # continue setup
+    sudo apt-get install python-pyaudio python3-pyaudio
+    pip install pydub
+
+Now setup virtualenv ([howto?](http://www.pythoncentral.io/how-to-install-virtualenv-python/)):
+
+    pip install virtualenv
+    virtualenv --system-site-packages env_with_system
+
+Install from PyPI:
+
+    source env_with_system/bin/activate
+    pip install PyDejavu
+
+You can also install the latest code from GitHub:
+
+    source env_with_system/bin/activate
+    pip install https://github.com/worldveil/dejavu/zipball/master
+
+
 ## Fedora 20+
 
 ### Dependency installation on Fedora 20+
